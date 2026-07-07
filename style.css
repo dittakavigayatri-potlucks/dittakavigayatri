@@ -1,0 +1,234 @@
+/* Xin Wan-inspired minimal academic website style */
+:root {
+  --bg: #ffffff;
+  --fg: #222222;
+  --muted: #555555;
+  --link: #b00020;
+  --border: #e6e6e6;
+  --input: #ffffff;
+}
+
+:root.dark {
+  --bg: #151515;
+  --fg: #eeeeee;
+  --muted: #bbbbbb;
+  --link: #ff8a9a;
+  --border: #333333;
+  --input: #202020;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 28px 34px 60px;
+}
+
+.hero {
+  position: relative;
+  min-height: 260px;
+}
+
+.welcome {
+  margin: 0 0 6px;
+}
+
+h1 {
+  margin: 0 0 4px;
+  font-size: 32px;
+  line-height: 1.15;
+  font-weight: 500;
+}
+
+h2 {
+  margin: 68px 0 18px;
+  font-size: 34px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+h3 {
+  margin: 22px 0 2px;
+  font-size: 20px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+p {
+  margin: 0 0 14px;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.links {
+  margin: 4px 0 10px;
+  font-size: 15px;
+}
+
+.links a {
+  margin-right: 8px;
+}
+
+.email,
+.updated,
+.meta {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.abstract {
+  max-width: 980px;
+  margin-top: 24px;
+}
+
+.abstract h2 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+.theme-toggle {
+  position: absolute;
+  right: 0;
+  bottom: 12px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--fg);
+  border-radius: 999px;
+  font-size: 20px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.toc {
+  margin: 14px 0 38px;
+  padding: 10px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  font-size: 16px;
+}
+
+.toc a {
+  margin-right: 16px;
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.toc a:hover {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+ul {
+  margin: 0 0 20px 28px;
+  padding: 0;
+}
+
+li {
+  margin: 7px 0;
+}
+
+.paper {
+  margin-bottom: 18px;
+}
+
+.paper p {
+  max-width: 1000px;
+}
+
+.spacer {
+  margin-top: 28px;
+}
+
+form {
+  max-width: 600px;
+}
+
+label {
+  display: block;
+  margin-bottom: 14px;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  padding: 9px 10px;
+  background: var(--input);
+  color: var(--fg);
+  border: 1px solid var(--border);
+  font-family: inherit;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  padding: 8px 16px;
+  border: 1px solid var(--fg);
+  background: transparent;
+  color: var(--fg);
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  border-color: var(--link);
+  color: var(--link);
+}
+
+footer {
+  margin-top: 70px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+@media (max-width: 760px) {
+  body {
+    font-size: 16px;
+  }
+
+  .page {
+    padding: 22px 20px 50px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    margin-top: 52px;
+    font-size: 28px;
+  }
+
+  .toc a {
+    display: inline-block;
+    margin-bottom: 6px;
+  }
+
+  .theme-toggle {
+    position: static;
+    margin-top: 14px;
+  }
+}
