@@ -8,14 +8,6 @@
   --input: #ffffff;
 }
 
-:root.dark {
-  --bg: #151515;
-  --fg: #eeeeee;
-  --muted: #bbbbbb;
-  --link: #ff8a9a;
-  --border: #333333;
-  --input: #202020;
-}
 
 * {
   box-sizing: border-box;
@@ -106,18 +98,6 @@ a {
   font-size: 22px;
 }
 
-.theme-toggle {
-  position: absolute;
-  right: 0;
-  bottom: 12px;
-  border: 1px solid var(--border);
-  background: transparent;
-  color: var(--fg);
-  border-radius: 999px;
-  font-size: 20px;
-  padding: 4px 8px;
-  cursor: pointer;
-}
 
 .toc {
   margin: 14px 0 38px;
@@ -225,10 +205,5 @@ footer {
   .toc a {
     display: inline-block;
     margin-bottom: 6px;
-  }
-
-  .theme-toggle {
-    position: static;
-    margin-top: 14px;
   }
 }
