@@ -1,192 +1,326 @@
-/* ==========================================================
-   LaTeX-style stylesheet
-   Font: Latin Modern (the web version of Computer Modern,
-   i.e. the LaTeX font). We import latex.css, which defines
-   the "Latin Modern" @font-face rules, then override its
-   layout with our own below.
-   ========================================================== */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Naga Siva Gayatri Dittakavi</title>
+  <meta name="description" content="Academic and quantitative research website of Naga Siva Gayatri Dittakavi." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <header id="top" class="hero">
+      <p class="welcome">Welcome!</p>
+      <h1>Naga Siva Gayatri Dittakavi</h1>
 
-@import url('https://latex.now.sh/style.css');
+      <nav class="links" aria-label="Primary links">
+        <a href="mailto:nd2921@columbia.edu">Email</a>
+        <!-- TODO: add LinkedIn URL -->
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <!-- TODO: add CV link (PDF) -->
+        <a href="#" aria-label="Website">CV</a>
+        <a href="https://github.com/dittakavigayatri-potlucks" aria-label="GitHub">Github</a>
+        <!-- TODO: add Google Scholar URL -->
+        <a href="#" aria-label="Google Scholar">Google Scholar</a>
+        <a href="#projects">Personal Projects</a>
+      </nav>
 
-/* Neutralize latex.css's page layout (we use .page instead) */
-body {
-  max-width: none;
-  margin: 0;
-  padding: 0;
-}
+      <p class="email">Email: nd2921 (at) columbia (dot) edu</p>
+      <p class="updated">Last Update: July 2026</p>
 
-/* ---------- Base ---------- */
-:root {
-  --text: #1a1a1a;
-  --muted: #555;
-  --rule: #1a1a1a;
-  --link: #a00;            /* classic hyperref-style dark red */
-  --bg: #ffffff;
-}
+      <section class="abstract" aria-labelledby="abstract-title">
+        <h2 id="abstract-title">Abstract</h2>
+        <p>
+          I am an M.A. candidate in Quantitative Methods in the Social Sciences at Columbia University,
+          working on market microstructure, stochastic finance, financial econometrics, and market design.
+          My current research studies Automated Market Makers, CEX&ndash;DEX arbitrage, liquidity provision,
+          inventory risk, and execution quality using stochastic modeling, simulation, and empirical market
+          analysis. I am particularly interested in what happens to the classical microstructure objects
+          &mdash; routing, price discovery, latency, and adverse selection &mdash; when liquidity for the
+          same asset is fragmented across venues with very different settlement and information properties.
+        </p>
+        <p>
+          Prior to Columbia, I completed a B.Sc. in Mathematics (Honors) with a minor in Economics at Lady
+          Shri Ram College for Women, University of Delhi. Along the way I have worked on fiscal ranking
+          methodologies and trade analysis at NITI Aayog, India's federal policy think tank; on transport
+          economics and commuting behaviour at SPIESR, work that grew into two Springer chapters; and on
+          causal program evaluation at Columbia's Institute for Social and Economic Research and Policy.
+          My research background accordingly spans DeFi market microstructure, causal inference, transport
+          economics, urban policy, and quantitative public-policy analysis.
+        </p>
+      </section>
+    </header>
 
-* { box-sizing: border-box; }
+    <nav class="toc" aria-label="Section navigation">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#projects">Projects</a>
+      <a href="#talks">Talks</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#honours">Honours</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-html { font-size: 18px; }
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        My research interests are Market Microstructure, Quantitative Finance, Financial Econometrics,
+        Causal Inference, Stochastic Optimization, and Algorithmic Trading. I am particularly interested in
+        how market design, latency, liquidity concentration, and routing incentives shape outcomes in
+        decentralized and centralized markets: where price discovery actually happens when the same asset
+        trades on many venues at once, how arbitrageurs and liquidity providers respond to the frictions
+        each venue imposes, and what this implies for the design of exchanges and lending markets.
+      </p>
+      <p>
+        Methodologically, I work with stochastic processes and simulation, econometric and causal-inference
+        designs (difference-in-differences, panel methods, quasi-experimental estimators), and
+        optimization &mdash; from mixed-integer programming to reinforcement learning. I care about
+        empirical work that is reproducible end to end: my projects ship with their data-collection
+        pipelines and code.
+      </p>
+    </section>
 
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: 'Latin Modern', 'Computer Modern Serif', Georgia, 'Times New Roman', serif;
-  line-height: 1.55;
-  text-rendering: optimizeLegibility;
-}
+    <section id="research">
+      <h2>Research</h2>
 
-.page {
-  max-width: 46rem;             /* ~ \textwidth of an article */
-  margin: 0 auto;
-  padding: 3rem 1.25rem 4rem;
-}
+      <article class="paper">
+        <h3>Market Design and Liquidity Provision in Automated Market Makers</h3>
+        <p class="meta">Work in Progress &middot; Mentored research under Prof. Steven Campbell, Columbia University</p>
+        <p>
+          Developing stochastic models of liquidity provision, inventory risk, and cross-exchange arbitrage
+          across centralized and decentralized exchanges. The project asks how order routing, price
+          discovery, and latency behave when liquidity for the same asset is fragmented across multiple
+          venues; how arbitrage links centralized and decentralized markets and how quickly mispricings
+          close; and how adverse selection &mdash; informed flow picking off passive liquidity providers
+          &mdash; manifests differently across venue designs and feeds back into routing incentives. The
+          approach combines stochastic modeling and simulation with empirical analysis of cross-venue trade
+          and quote data.
+        </p>
+      </article>
 
-/* ---------- Headings ---------- */
-h1, h2, h3 {
-  font-weight: bold;
-  line-height: 1.2;
-  margin: 0 0 0.5rem;
-}
+      <article class="paper">
+        <h3>Planning for a Fast Metropolizing Developing Economy</h3>
+        <p class="meta">Springer Nature. Accepted in 2024 [forthcoming].</p>
+        <p>Naga Siva Gayatri Dittakavi and Nachiket Gosavi</p>
+        <p>
+          A book chapter on the planning challenges of a rapidly metropolizing developing economy, drawing
+          on our earlier empirical work on commuting behaviour and residential location in India.
+        </p>
+      </article>
 
-h1 { font-size: 1.9rem; text-align: center; margin-bottom: 0.75rem; }
+      <article class="paper">
+        <h3>Optimizing Urban Economic Potential Using MOORA and FUCA Techniques</h3>
+        <p class="meta">Taylor &amp; Francis. Revise &amp; Resubmit.</p>
+        <p>Naga Siva Gayatri Dittakavi and Yograj Singh</p>
+        <p>
+          Applies two multi-criteria decision-making methods &mdash; MOORA (Multi-Objective Optimization on
+          the basis of Ratio Analysis) and FUCA (Faire Un Choix Ad&eacute;quat) &mdash; to construct a
+          composite ranking of city districts by economic potential, and compares how the choice of
+          aggregation method affects the resulting ordering.
+        </p>
+      </article>
 
-h2 {
-  font-size: 1.35rem;
-  margin-top: 2.25rem;
-  padding-bottom: 0.2rem;
-  border-bottom: 1px solid var(--rule);   /* full-width ruled section headers */
-}
+      <article class="paper">
+        <h3>Commute Distance and Residential Characteristics: Weathering the Storm</h3>
+        <p class="meta">Lecture Notes in Civil Engineering, Springer Nature Singapore. Published. Contributor.</p>
+        <p>
+          Tests whether the developed-country finding that residential self-selection plays little role in
+          commute distance holds in India, using the nationally representative 76th round of the NSSO.
+          Over two-thirds of job-related trips cover under 5&nbsp;km, relocation for employment is rare, and
+          household location and physical characteristics show negligible-to-weak association with commute
+          distance &mdash; implying that the four-step transport model cannot be the sole basis for
+          transport planning in Indian cities.
+          Presented at IMRC 2024, IIM Ahmedabad, and TPMDC 2024, IIT Bombay.
+          <a href="https://link.springer.com/chapter/10.1007/978-981-96-8114-3_7">Link</a>
+        </p>
+      </article>
 
-h3 { font-size: 1.05rem; margin-top: 1.25rem; }
+      <article class="paper">
+        <h3>Limits to Commute: The Case of Indian Women</h3>
+        <p class="meta">Lecture Notes in Civil Engineering, Springer Nature Singapore, 2024. Published. Contributor.</p>
+        <p>Naga Siva Gayatri Dittakavi and Nachiket Gosavi</p>
+        <p>
+          Examines whether the gender gap in commuting documented in developed economies appears in India,
+          drawing on household-level data from the 76th NSSO round. Stratified regressions compare women's
+          commute patterns across urban and rural settings and identify their determinants, with
+          implications for women-centric transport policy.
+          <a href="https://link.springer.com/chapter/10.1007/978-981-99-6090-3_60">Link</a>
+        </p>
+      </article>
 
-/* ---------- Hero ---------- */
-.hero { text-align: center; }
+      <article class="paper">
+        <h3>Three Person&ndash;Two Cuts Problem</h3>
+        <p class="meta">&Eacute;clat, Annual Journal of the Department of Mathematics, LSR, University of Delhi, 2023. Published.</p>
+        <p>Naga Siva Gayatri Dittakavi, D. Bharadwaj, and N. Kumar</p>
+        <p>
+          A fair-division paper on allocating a continuously divisible good among three agents using only
+          two cuts, written under the department's faculty mentorship program.
+          <a href="https://lsr.edu.in/wp-content/uploads/2023/12/Journal-%C3%89clat-Vol-XIV-2022-23.pdf">Journal PDF</a>
+        </p>
+      </article>
+    </section>
 
-.welcome {
-  font-style: italic;
-  color: var(--muted);
-  margin: 0 0 0.25rem;
-}
+    <section id="projects">
+      <h2>Personal Projects</h2>
 
-.links {
-  margin: 0.5rem 0 0.75rem;
-}
-.links a {
-  margin: 0 0.4rem;
-  white-space: nowrap;
-}
-.links a::before { content: '['; color: var(--muted); }
-.links a::after  { content: ']'; color: var(--muted); }
+      <article class="paper">
+        <h3>Deep Reinforcement Learning &amp; Systematic Trading Strategies</h3>
+        <p>
+          Extended Sood et al. (2023) into a PPO portfolio-allocation framework integrating
+          earnings-transcript sentiment, macro-regime indicators, and options-implied volatility features
+          across equities, fixed income, commodities, and cash, with turnover penalties and ESG exclusions
+          built into the action space. Applied SHAP for explainability of the learned policy and
+          stress-tested the agent over the 2020 COVID shock and the 2022 tightening cycle, where it
+          outperformed constrained mean-variance optimization on Sharpe, Sortino, Calmar, and
+          turnover-adjusted net returns.
+        </p>
+      </article>
 
-.email, .updated {
-  margin: 0.1rem 0;
-  font-size: 0.92rem;
-  color: var(--muted);
-}
+      <article class="paper">
+        <h3>Portfolio Optimization via Mixed-Integer Quadratic Programming</h3>
+        <p>
+          Formulated portfolio construction as a Mixed-Integer Quadratic Program in Gurobi, encoding the
+          constraints institutional portfolios actually face &mdash; cardinality limits, minimum-lot
+          thresholds, and sector-concentration caps &mdash; within a mean-variance objective. Benchmarked
+          the resulting portfolios against unconstrained mean-variance and equal-weight (1/N) baselines
+          across equity, fixed-income, and commodity universes, quantifying the efficiency cost of each
+          constraint class and its sensitivity along the risk-return frontier.
+        </p>
+      </article>
 
-/* ---------- Abstract ---------- */
-.abstract {
-  margin: 1.75rem auto 0;
-  max-width: 40rem;
-  text-align: justify;
-  hyphens: auto;
-}
-.abstract h2 {
-  border: none;
-  text-align: center;
-  font-size: 1.05rem;
-  margin: 0 0 0.5rem;
-}
-.abstract p {
-  font-size: 0.95rem;
-  margin: 0 0 0.75rem;
-  text-indent: 1.5em;
-}
+      <article class="paper">
+        <h3>Systematic Trading Dashboard &amp; Backtesting Framework</h3>
+        <p>
+          Built an IMC Prosperity trading dashboard and Python backtester supporting SMA, EMA, RSI,
+          Bollinger Bands, and volatility filters, with signal visualization, parameter sweeps,
+          transaction-cost assumptions, and performance attribution &mdash; so that a strategy idea can go
+          from hypothesis to cost-adjusted tearsheet in one workflow. Ranked 85th nationally in the United
+          States in the 2026 Prosperity Challenge.
+        </p>
+      </article>
 
-/* ---------- Table of contents nav ---------- */
-.toc {
-  margin: 2rem 0 0.5rem;
-  padding: 0.6rem 0;
-  border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
-  text-align: center;
-  font-variant: small-caps;
-  letter-spacing: 0.03em;
-}
-.toc a { margin: 0 0.55rem; text-decoration: none; }
-.toc a:hover { text-decoration: underline; }
+      <article class="paper">
+        <h3>MPATH-India</h3>
+        <p>
+          Founded a public-health research initiative and recruited over 70 volunteers while developing a
+          geospatial disease-surveillance framework. The framework combines k-means clustering with
+          Principal Component Analysis to identify high-risk regions from multivariate health and
+          demographic indicators, improving prevalence mapping and helping target limited screening
+          resources where they matter most.
+        </p>
+      </article>
+    </section>
 
-/* ---------- Body sections ---------- */
-section p {
-  margin: 0.4rem 0 0.9rem;
-  text-align: justify;
-  hyphens: auto;
-}
+    <section id="talks">
+      <h2>Selected Talks</h2>
 
-.paper { margin-bottom: 1.4rem; }
-.paper h3 { margin-bottom: 0.15rem; }
-.paper .meta {
-  font-style: italic;
-  color: var(--muted);
-  font-size: 0.92rem;
-  margin: 0 0 0.35rem;
-  text-align: left;
-}
-.paper p { margin: 0.25rem 0; }
+      <h3>2024</h3>
+      <p>Commute Distance and Residential Characteristics: Weathering the Storm @ IMRC, IIM Ahmedabad</p>
+      <p>Commute Distance and Residential Characteristics: Weathering the Storm @ TPMDC, IIT Bombay</p>
 
-.spacer { margin-top: 1.1rem !important; }
+      <h3>2023</h3>
+      <p>Understanding Crime Using Mathematics: An Analysis Through Partial Differential Equations @ Anupama Dua Paper Presentation</p>
 
-/* ---------- Links ---------- */
-a { color: var(--link); text-decoration: none; }
-a:hover { text-decoration: underline; }
+      <h3>2022</h3>
+      <p>Limits to Commute: The Case of Indian Women @ TPMDC, IIT Bombay</p>
+      <p>How Far Do Women Commute? @ National Seminar on Changing Characteristics of the Indian Labour Market, SPIESR</p>
+    </section>
 
-/* ---------- Contact form ---------- */
-#contact form {
-  display: grid;
-  gap: 0.8rem;
-  max-width: 30rem;
-  margin: 1rem 0;
-}
-#contact label {
-  display: grid;
-  gap: 0.25rem;
-  font-size: 0.95rem;
-}
-#contact input,
-#contact textarea {
-  font-family: inherit;
-  font-size: 0.95rem;
-  padding: 0.45rem 0.6rem;
-  border: 1px solid #999;
-  border-radius: 2px;
-  background: #fff;
-  color: var(--text);
-}
-#contact input:focus,
-#contact textarea:focus {
-  outline: none;
-  border-color: var(--link);
-}
-#contact button {
-  font-family: inherit;
-  font-size: 0.95rem;
-  padding: 0.5rem 1.2rem;
-  border: 1px solid var(--text);
-  border-radius: 2px;
-  background: #fff;
-  color: var(--text);
-  cursor: pointer;
-  justify-self: start;
-}
-#contact button:hover { background: #f2f2f2; }
+    <section id="experience">
+      <h2>Professional Experiences</h2>
 
-/* ---------- Small screens ---------- */
-@media (max-width: 600px) {
-  html { font-size: 16.5px; }
-  .page { padding: 2rem 1rem 3rem; }
-  .toc a { margin: 0 0.35rem; }
-  .abstract { text-align: left; }
-  .abstract p { text-indent: 0; }
-}
+      <article class="paper">
+        <h3>Mentored Researcher under Prof. Steven Campbell @ Columbia University</h3>
+        <p class="meta">May 2026 &ndash; Current</p>
+        <p>
+          Research on market design and liquidity provision in Automated Market Makers: stochastic models
+          of liquidity provision, inventory risk, and CEX&ndash;DEX arbitrage, with attention to order
+          routing, price discovery, latency, and adverse selection in multi-venue markets.
+        </p>
+      </article>
+
+      <article class="paper">
+        <h3>Departmental Research Assistant for Prof. Sandhya Kajeepeta @ Columbia ISERP</h3>
+        <p class="meta">Oct 2025 &ndash; Dec 2025</p>
+        <p>
+          Applied quasi-Poisson regression and difference-in-differences designs to estimate causal policy
+          impacts; diagnosed model robustness across competing specifications and produced
+          publication-ready visualizations for downstream research deliverables.
+        </p>
+      </article>
+
+      <article class="paper">
+        <h3>Research Intern, Economics and Finance Vertical @ NITI Aayog</h3>
+        <p class="meta">Jul 2024 &ndash; Aug 2024</p>
+        <p>
+          Redesigned fiscal performance rankings for all 28 Indian states via Wroclaw taxonomy, and
+          authored a 15-page logistics benchmarking report identifying five global best practices that
+          directly informed policy directives cutting transport costs by 9%. Performed granular trend
+          decomposition on the Economic Survey 2024 External Sector chapter, isolating the structural
+          drivers of 12% year-on-year export growth and providing robustness checks for policy-facing
+          conclusions.
+        </p>
+      </article>
+
+      <article class="paper">
+        <h3>Research Intern, Transport Research @ SPIESR</h3>
+        <p class="meta">Jul 2022 &ndash; Aug 2023</p>
+        <p>
+          Worked on transport economics and commuting behaviour in India using nationally representative
+          NSSO survey data &mdash; research that developed into the Springer chapters
+          <em>Limits to Commute</em> and <em>Commute Distance and Residential Characteristics</em> and was
+          presented at SPIESR's National Seminar on the Changing Characteristics of the Indian Labour
+          Market.
+        </p>
+      </article>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+
+      <article class="paper">
+        <h3>Columbia University in the City of New York</h3>
+        <p class="meta">Sep 2025 &ndash; Dec 2026</p>
+        <p>M.A. in Quantitative Methods in the Social Sciences</p>
+        <p>
+          Coursework: Stochastic Processes &amp; Applications, Advanced Econometrics, Statistical Methods
+          for Finance, Time Series Analysis &amp; Panel Data, Algorithmic Trading, Asset Allocation, Natural
+          Language Processing.
+        </p>
+      </article>
+
+      <article class="paper">
+        <h3>Lady Shri Ram College for Women, University of Delhi</h3>
+        <p class="meta">Aug 2021 &ndash; May 2024</p>
+        <p>B.Sc. Mathematics (Honors), First Class &middot; Minor in Economics</p>
+      </article>
+    </section>
+
+    <section id="honours">
+      <h2>Awards &amp; Academic Honours</h2>
+      <p>
+        AMTI National Mathematics Olympiad &mdash; All India Rank 8, among hundreds of thousands of
+        participants nationwide.
+      </p>
+      <p>
+        NASA Ames National Space Settlement Design Contest &mdash; 3rd place internationally, for a
+        submission judged at NASA Ames Research Center.
+      </p>
+      <p>Grade XII CBSE &mdash; 3rd rank at state level.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form action="mailto:nd2921@columbia.edu" method="post" enctype="text/plain">
+        <label>Your Name <input name="name" type="text" /></label>
+        <label>Your Email <input name="email" type="email" /></label>
+        <label>Your Message <textarea name="message" rows="5"></textarea></label>
+        <button type="submit">Send Message</button>
+      </form>
+      <p class="email">Or write to me directly: nd2921 (at) columbia (dot) edu</p>
+    </section>
+
+  </main>
+</body>
+</html>
